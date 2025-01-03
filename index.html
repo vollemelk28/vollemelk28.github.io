@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Jan Schaap</title>
+    <title>Over Mij - Anthonie Schaap</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <img src="https://github.com/vollemelk28/vollemelk28.github.io/blob/main/logo.png" alt="Anthonie Schaap Logo" class="logo">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#about">Over Mij</a></li>
+                    <li><a href="#experience">Werkervaring</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -28,7 +31,7 @@
             </p>
         </section>
 
-        <section class="scrollable">
+        <section id="experience" class="scrollable">
             <div class="section">
                 <h3>Mijn Ervaring</h3>
                 <img src="https://via.placeholder.com/800x400" alt="Ervaring Foto">
@@ -40,6 +43,16 @@
                 <p>Ik combineer data-analyse en softwareontwikkeling om waardevolle inzichten te creëren.</p>
             </div>
         </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Python, C++, AI-modellen, Softwareontwikkeling, Data-analyse, Probleemoplossing</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Neem contact op via <a href="mailto:anthonie.schaap@gmail.com">anthonie.schaap@gmail.com</a>.</p>
+        </section>
     </main>
 
     <footer>
@@ -47,3 +60,7 @@
     </footer>
 </body>
 </html>
+
+
+
+
