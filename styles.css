@@ -19,7 +19,8 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center; /* Zorgt ervoor dat de items verticaal gecentreerd zijn */
+  align-items: center; /* Verticaal centreren */
+  justify-content: center; /* Horizontaal centreren */
   padding: 0 2rem;
 }
 
