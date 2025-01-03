@@ -92,6 +92,10 @@ section p {
   border-radius: 10px;
   margin-bottom: 1rem;
 }
+.logo {
+  width: 150px; /* Pas de breedte aan */
+  height: auto; /* Zorg ervoor dat de verhoudingen behouden blijven */
+}
 
 /* Footer */
 footer {
