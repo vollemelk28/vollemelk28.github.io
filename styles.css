@@ -14,34 +14,25 @@ header {
   background-color: #333;
   color: white;
   padding: 1rem 0;
-  text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;  /* Zorgt ervoor dat de inhoud aan de linkerkant wordt uitgelijnd */
-  padding: 0 2rem;  /* Voeg wat ruimte toe aan de zijkanten */
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: bold;
+  align-items: center; /* Zorgt ervoor dat de items verticaal gecentreerd zijn */
+  padding: 0 2rem;
 }
 
 header .logo {
-  height: 50px;  /* Stel de hoogte van het logo in (kan worden aangepast) */
-  margin-right: 20px;  /* Ruimte tussen logo en navigatie */
+  height: 50px;  /* Pas de hoogte van je logo aan */
+  margin-right: 20px;  /* Ruimte tussen het logo en de navigatie */
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: flex-start;  /* Zorg ervoor dat de links in een rij staan */
-  gap: 20px;
+  display: flex;  /* Zorgt ervoor dat de nav-items naast elkaar komen */
+  gap: 20px;  /* Ruimte tussen de navigatie-items */
   margin: 0;
 }
 
