@@ -111,7 +111,8 @@ section p {
 
 .image-container img {
   width: 48%; /* Ensure the images fit nicely side by side */
-  object-fit: cover; /* Keep the images looking good */
+  object-fit: contain; /* Keep the images looking good */
+  height: auto;
 }
 
 /* Footer */
