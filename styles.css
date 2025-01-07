@@ -103,6 +103,17 @@ section p {
   height: auto; /* Zorg ervoor dat de verhoudingen behouden blijven */
 }
 
+.image-container {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+  gap: 10px; /* Optional: add spacing between images */
+}
+
+.image-container img {
+  width: 48%; /* Ensure the images fit nicely side by side */
+  object-fit: cover; /* Keep the images looking good */
+}
+
 /* Footer */
 footer {
   text-align: center;
