@@ -1,69 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over Mij - Anthonie Schaap</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Mij - Anthonie Schaap</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <img src="logo.png" alt="Anthonie Schaap Logo" class="logo">
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#about">Over Mij</a></li>
-                    <li><a href="#experience">Werkervaring</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body :class="{ 'dark-mode': darkMode }" id="app">
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Anthonie Schaap Logo" class="logo">
+      <nav>
+        <ul class="navbar">
+          <li><a href="#about">Over Mij</a></li>
+          <li><a href="#experience">Werkervaring</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button @click="toggleDarkMode" class="dark-mode-toggle">
+        {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
+      </button>
+    </div>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>Over Mij</h2>
+  <main>
+    <section id="about">
+        <h2>Over Mij</h2>
+        <div class="about-container">
+            <img src="pasfoto1.jpg" alt="Anthonie Schaap" class="about-image">
+            <div class="about-text">
             <p>
-                Hallo! Mijn naam is Anthonie Schaap. Ik ben een <strong>Data Scientist AI</strong> en <strong>Software Developer</strong>
-                met een sterke academische achtergrond met een bachelor Informatica en een master Computer Science aan de Universiteit Leiden.
-                Ik heb uitgebreide ervaring in <strong>Python</strong> en <strong>C++</strong> en geniet ervan om innovatieve softwareoplossingen te ontwikkelen.
+                Hallo! Mijn naam is Anthonie Schaap, een Data Scientist AI en Software Developer met een sterke academische achtergrond. Met een bachelor in Informatica en een master in 
+                Computer Science aan de Universiteit Leiden is een solide basis gelegd in geavanceerde technologieën. Uitgebreide ervaring in Python en C++ wordt gecombineerd met een passie voor 
+                het ontwikkelen van innovatieve softwareoplossingen. 
+                Ik ben werkzaam bij CIMSOLUTIONS als Data Scientist / Software Engineer, met een focus op detachering en het ontwikkelen van innovatieve AI-producten.
             </p>
-        </section>
-
-        <section id="experience" class="scrollable">
-            <div class="section">
-                <h3>Mijn Ervaring</h3>
-                <div class="image-container">
-                    <img src="ul_logo.png" alt="Ervaring Foto Links">
-                    <img src="cim_logo.png" alt="Ervaring Foto Rechts">
-                </div>
-                <p>Ik heb gewerkt aan diverse AI- en softwareprojecten waarin ik complexe problemen oploste.</p>
             </div>
-            <div class="section">
-                <h3>Waarom Samenwerken?</h3>
-                <img src="https://via.placeholder.com/800x400" alt="Samenwerken Foto">
-                <p>Ik combineer data-analyse en softwareontwikkeling om waardevolle inzichten te creëren.</p>
+            <div class="info-box">
+                <h3>Informatie</h3>
+                <hr>
+                <p><strong>Naam:</strong> Anthonie Schaap</p>
+                <p><strong>E-mail:</strong> <a href="mailto:anthonie.schaap@gmail.com">anthonie.schaap@gmail.com</a></p>
+                <p><strong>Telefoon:</strong> +31 612086447</p>
+                <p><strong>Talen:</strong> Nederlands, Engels</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Python, C++, AI-modellen, Softwareontwikkeling, Data-analyse, Probleemoplossing</p>
-        </section>
+    <section id="experience" class="scrollable">
+        <div class="section">
+            <h3>Mijn Ervaring</h3>
+            <div class="image-container">
+                <img src="ul_logo3.png" alt="Ervaring Foto Links">
+                <img src="cim_logo.png" alt="Ervaring Foto Rechts">
+            </div>
+            <p>Diverse AI- en softwareprojecten hebben bijgedragen aan het ontwikkelen van probleemoplossende vaardigheden voor complexe vraagstukken. 
+                Bij CIMSOLUTIONS is waardevolle ervaring opgedaan als Master AI Researcher, en het traineeship AI & Software Engineering succesvol afgerond. 
+                Eerdere functies omvatten rollen als Workspace Engineer, SOC Data Analist, IT Helpdesker en Teaching Assistant bij verschillende programmeervakken aan de 
+                Universiteit Leiden. De academische achtergrond bestaat uit een Bachelor Informatica en een Master Computer Science, met een specialisatie in Data Science, 
+                beide behaald aan de Universiteit Leiden.
+            </p>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Neem contact op via <a href="mailto:anthonie.schaap@gmail.com">anthonie.schaap@gmail.com</a>.</p>
-        </section>
-    </main>
+    <section id="skills">
+        <h2>Skills</h2>
+        <canvas id="skillsChart"></canvas>
+        <p>Python, C++, Java, AI-modellen, Softwareontwikkeling, Data-analyse, Probleemoplossing</p>
+    </section>
 
-    <footer>
-        <p>© 2025 Anthonie Schaap. Gebouwd met HTML en CSS.</p>
-    </footer>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Neem contact op via <a href="mailto:anthonie.schaap@gmail.com">anthonie.schaap@gmail.com</a>.</p>
+    </section>
+</main>
+
+  <footer>
+    <p>© 2025 Anthonie Schaap. Gebouwd met Vue, Chart.js, HTML en CSS.</p>
+  </footer>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          darkMode: false,
+          chart: null,
+        };
+      },
+      mounted() {
+        this.createChart();
+      },
+      methods: {
+        toggleDarkMode() {
+          this.darkMode = !this.darkMode;
+        },
+        createChart() {
+          const ctx = document.getElementById('skillsChart').getContext('2d');
+          this.chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Python', 'C++', 'Java', 'AI Models', 'Data Analysis'],
+              datasets: [
+                {
+                  label: 'Skill Proficiency (%)',
+                  data: [90, 85, 80, 95, 88],
+                  backgroundColor: [
+                    '#FF6384',
+                    '#36A2EB',
+                    '#FFCE56',
+                    '#4BC0C0',
+                    '#9966FF',
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                },
+              },
+            },
+          });
+        },
+      },
+    }).mount('#app');
+  </script>
 </body>
 </html>
-
-
-
-

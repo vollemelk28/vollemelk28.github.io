@@ -9,6 +9,26 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f9;
+}
+
+.dark-mode-toggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+
 /* Header */
 header {
   background-color: #333;
@@ -115,15 +135,66 @@ section p {
   height: auto;
 }
 
+/* Algemene styling voor de sectie */
+#about {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Styling voor de titel */
+#about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #444;
+  font-weight: bold;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+/* Container voor de layout */
+.about-container {
+  display: flex;
+  align-items: stretch; /* Zorg dat de boxen even hoog blijven */
+  gap: 20px; /* Ruimte tussen de boxen */
+  max-width: none; /* Maximale breedte van de container */
+  max-height: 280px;
+  width: 100%; /* Gebruik 100% van de beschikbare breedte */
+  margin: 0 auto; /* Centreer de container horizontaal */
+  padding: 0 20px; /* Voeg wat padding links en rechts toe */
+  flex-wrap: nowrap; /* Zorg dat de boxen naast elkaar blijven */
+  box-sizing: border-box; /* Houd padding binnen de breedte */
+}
+
+/* Styling voor de tekstbox links */
+.about-text {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 2; /* Links krijgt meer ruimte */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Styling voor het informatievak rechts */
+.info-box {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1.8; /* Zorg dat deze niet te smal wordt */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background: #333;
-  color: white;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0;
-}
