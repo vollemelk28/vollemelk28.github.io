@@ -137,9 +137,8 @@ section p {
 
 /* Algemene styling voor de sectie */
 #about {
-  padding: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
   font-family: 'Arial', sans-serif;
   color: #333;
 }
@@ -157,16 +156,12 @@ section p {
 
 /* Container voor de layout */
 .about-container {
-  display: flex;
-  align-items: stretch; /* Zorg dat de boxen even hoog blijven */
-  gap: 20px; /* Ruimte tussen de boxen */
-  max-width: none; /* Maximale breedte van de container */
-  max-height: 280px;
-  width: 100%; /* Gebruik 100% van de beschikbare breedte */
-  margin: 0 auto; /* Centreer de container horizontaal */
-  padding: 0 20px; /* Voeg wat padding links en rechts toe */
-  flex-wrap: nowrap; /* Zorg dat de boxen naast elkaar blijven */
-  box-sizing: border-box; /* Houd padding binnen de breedte */
+    max-width: 100%; /* Zorgt ervoor dat het net zo breed is als de andere secties */
+    width: 100%;
+    padding: 0; /* Zorgt ervoor dat er geen extra ruimte is */
+    margin: 0 auto; /* Houdt het gecentreerd */
+    display: flex; /* Zorgt ervoor dat de inhoud netjes naast elkaar staat */
+    align-items: center;
 }
 
 /* Styling voor de tekstbox links */
