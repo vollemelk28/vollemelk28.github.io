@@ -113,28 +113,6 @@ section p {
   text-align: center;
 }
 
-.section img {
-  max-width: 100%;
-  border-radius: 0px;
-  margin-bottom: 1rem;
-}
-
-.logo {
-  width: 150px;
-  height: auto;
-}
-
-.image-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
-}
-
-.image-container img {
-  object-fit: contain;
-  height: auto;
-}
-
 /* Algemene styling voor de sectie */
 #about {
   padding: 0;
@@ -161,14 +139,15 @@ section p {
   padding: 0;
   margin: 0 auto 2rem auto; /* Ruimte onder de sectie */
   display: flex;
-  align-items: stretch; /* Zorgt ervoor dat alles dezelfde hoogte krijgt */
+  align-items: stretch; /* Gelijke hoogte voor alle elementen */
   gap: 1rem; /* Ruimte tussen de items */
+  min-height: 250px; /* Kleinere maar gelijke hoogte */
 }
 
 /* Styling voor de afbeelding */
 .about-image {
   width: 30%;
-  height: auto;
+  height: 100%; /* Laat de afbeelding de container vullen */
   object-fit: cover; /* Zorgt ervoor dat de afbeelding goed gevuld is */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -200,7 +179,21 @@ section p {
   overflow: hidden;
 }
 
+/* Afbeeldingen in de experience sectie */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.image-container img {
+  width: 48%; /* Gelijke breedte */
+  height: 150px; /* Gelijke hoogte */
+  object-fit: contain; /* Zorgt ervoor dat de afbeeldingen niet vervormen */
+}
+
 /* Footer */
 footer {
   text-align: center;
 }
+
