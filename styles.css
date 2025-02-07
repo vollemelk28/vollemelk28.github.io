@@ -115,7 +115,7 @@ section p {
 
 .section img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 0px;
   margin-bottom: 1rem;
 }
 .logo {
@@ -126,11 +126,11 @@ section p {
 .image-container {
   display: flex;
   justify-content: space-between; /* Space between images */
-  gap: 10px; /* Optional: add spacing between images */
+  gap: 0px; /* Optional: add spacing between images */
 }
 
 .image-container img {
-  width: 48%; /* Ensure the images fit nicely side by side */
+  /* width: 48%; /* Ensure the images fit nicely side by side */
   object-fit: contain; /* Keep the images looking good */
   height: auto;
 }
@@ -167,7 +167,7 @@ section p {
 /* Styling voor de tekstbox links */
 .about-text {
   background-color: #f9f9f9;
-  padding: 15px;
+  padding: 0px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 2; /* Links krijgt meer ruimte */
@@ -180,7 +180,7 @@ section p {
 /* Styling voor het informatievak rechts */
 .info-box {
   background-color: #fff;
-  padding: 15px;
+  padding: 0px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 1.8; /* Zorg dat deze niet te smal wordt */
